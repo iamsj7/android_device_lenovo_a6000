@@ -439,14 +439,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/vendor/etc/permissions/handheld_core_hardware.xml \
     device/lenovo/a6000/configs/sensors/_hals.conf:system/vendor/etc/sensors/_hals.conf
 
-# Thermal
-PRODUCT_PACKAGES += \
-    android.hardware.thermal@1.0-impl
-
-# Config File
-PRODUCT_COPY_FILES += \
-    device/lenovo/a6000/configs/thermal-engine.conf:system/vendor/etc/thermal-engine.conf
-
 # USB ID
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.usb.id.midi=90BA \
