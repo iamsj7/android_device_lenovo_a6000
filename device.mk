@@ -175,10 +175,6 @@ DEVICE_PACKAGE_OVERLAYS += \
     device/lenovo/a6000/overlay \
     device/lenovo/a6000/overlay-lineage
 
-# Enforced RRO targets
-PRODUCT_ENFORCE_RRO_TARGETS := \
-    framework-res
-
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     qcom.bluetooth.soc=smd \
