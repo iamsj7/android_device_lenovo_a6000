@@ -100,6 +100,11 @@ PRODUCT_COPY_FILES += \
     device/lenovo/a6000/audio/audio_policy.conf:system/vendor/etc/audio_policy.conf \
     device/lenovo/a6000/audio/mixer_paths.xml:system/vendor/etc/mixer_paths_qrd_skui.xml
 
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
+    android.hidl.manager@1.0
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/vendor/etc/permissions/android.hardware.audio.low_latency.xml
