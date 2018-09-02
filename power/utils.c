@@ -233,8 +233,25 @@ int is_ondemand_governor(char* governor) {
    return 0;
 }
 
-void interaction(int UNUSED(duration), int UNUSED(num_args), int UNUSED(opt_list[])) {
-/* Do nothing */
+#ifndef INTERACTION_BOOST
+void interaction(int UNUSED(duration), int UNUSED(num_args), int UNUSED(opt_list[]))
+{
+#else
+void interaction(int duration, int num_args, int opt_list[])
+{
+    static int lock_handle = 0;
+
+    if (duration < 0 || num_args < 1 || opt_list[0] == 0)
+        return;
+
+    if (qcopt_handle) {
+        if (perf_lock_acq) {
+            lock_handle = perf_lock_acq(lock_handle, duration, opt_list, num_args);
+            if (lock_handle == -1)
+                ALOGE("Failed to acquire lock.");
+        }
+    }
+#endif
 }
 
 //this is interaction using perf_hint instead of
