@@ -56,9 +56,9 @@ LOCAL_C_INCLUDES := \
         frameworks/native/include/media/openmax \
         frameworks/native/libs/nativewindow/include/ \
         frameworks/native/include/media/hardware \
-        hardware/qcom/display-caf-msm8916/libgralloc \
-        hardware/qcom/display-caf-msm8916/libqdutils \
-        hardware/qcom/media-caf-msm8916/libstagefrighthw \
+        hardware/qcom/display-caf/msm8916/libgralloc \
+        hardware/qcom/display-caf/msm8916/libqdutils \
+        hardware/qcom/media-caf/msm8916/libstagefrighthw \
         system/media/camera/include \
         $(LOCAL_PATH)/../../mm-image-codec/qexif \
         $(LOCAL_PATH)/../../mm-image-codec/qomx_core \
@@ -74,7 +74,7 @@ endif
 #ifeq ($(TARGET_USE_VENDOR_CAMERA_EXT),true)
 #LOCAL_C_INCLUDES += hardware/qcom/display/libgralloc
 #else
-LOCAL_C_INCLUDES += hardware/qcom/display-caf-msm8916/libgralloc
+LOCAL_C_INCLUDES += hardware/qcom/display-caf/msm8916/libgralloc
 #endif
 LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include/media
