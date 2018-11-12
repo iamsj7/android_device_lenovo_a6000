@@ -17,6 +17,11 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, device/lenovo/a6000/device.mk)
 
+# Inherit AOSP Vendor PE
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit AOSP Vendor AEX
+#$(call inherit-product, vendor/aosp/common.mk)
+
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
@@ -30,6 +35,10 @@ BOARD_VENDOR := Lenovo
 PRODUCT_BRAND := Lenovo
 PRODUCT_MODEL := A6000
 PRODUCT_MANUFACTURER := Lenovo
+
+# AOSP Additions
+TARGET_BOOT_ANIMATION_RES := 720
+TARGET_GAPPS_ARCH := arm
 
 # Device Identifiers
 PRODUCT_BUILD_PROP_OVERRIDES += \
