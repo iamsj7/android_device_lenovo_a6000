@@ -17,6 +17,10 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, device/lenovo/a6000/device.mk)
 
+# Inherit aicp specific configuration
+$(call inherit-product, $(TOPDIR)vendor/aosp/common.mk)
+TARGET_BOOT_ANIMATION_RES := 720
+
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
